@@ -76,7 +76,7 @@ module.exports =
 /***/ (function(module, exports) {
 
 module.exports = {
-	"test": "test___3vMxg"
+	"test": "test___NQWc8"
 };
 
 /***/ }),
@@ -92,7 +92,7 @@ module.exports = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_antd___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_antd__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__DuaContainer_css__ = __webpack_require__("./components/Container/DuaContainer.css");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__DuaContainer_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__DuaContainer_css__);
-var _jsxFileName = "C:\\Users\\Acer\\Desktop\\newProject\\dua-react-app\\components\\Container\\DuaContainer.js";
+var _jsxFileName = "/home/abdurahman/Desktop/dua-react-app/components/Container/DuaContainer.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -111,6 +111,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 
 
 
+var Search = __WEBPACK_IMPORTED_MODULE_1_antd__["Input"].Search;
 
 var DuaWrapper =
 /*#__PURE__*/
@@ -157,26 +158,27 @@ function (_Component) {
         }, {
           // id:undefined,
           title: 'Sumeja',
-          body: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, iusto!" // category: undefined,
+          body: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel, aperiam?" // category: undefined,
           // source: undefined,
           // chain: undefined
 
-        }]
+        }] // onHandleSearch(e){
+        //     const text = e.target.value.toLowerCase();
+        //     document.querySelectorAll('.collection-item').forEach(function(task){
+        //         const item = task.innerText.toLowerCase();
+        //         if(item.indexOf(text) != -1){
+        //             task.style.display = 'block';
+        //         } else {
+        //             task.style.display = 'none';
+        //         }
+        //     })
+        // }
+
       }
     }), _temp));
   }
 
   _createClass(DuaWrapper, [{
-    key: "onHandleChange",
-    value: function onHandleChange(e) {
-      var value = e.target.value;
-      var duas = this.state.duas;
-      var results = duas.filter(function (dua) {
-        var regex = new RegExp(value, 'gi');
-        return dua.title.match(regex) || dua.body.match(regex);
-      });
-    }
-  }, {
     key: "render",
     value: function render() {
       var duas = this.state.duas;
@@ -187,16 +189,30 @@ function (_Component) {
           content: item.body,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 56
+            lineNumber: 64
           }
         });
       });
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Fragment, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 68
         }
-      }, novo);
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd__["Col"], {
+        span: 12,
+        className: __WEBPACK_IMPORTED_MODULE_2__DuaContainer_css___default.a.test,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 69
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(InputField, {
+        duas: this.state.duas,
+        onChange: this.onHandleChange,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 70
+        }
+      })));
     }
   }]);
 
@@ -205,27 +221,69 @@ function (_Component) {
 
 
 
-var FormComponent = function FormComponent(props) {
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 68
+var InputField =
+/*#__PURE__*/
+function (_Component2) {
+  _inherits(InputField, _Component2);
+
+  function InputField(props) {
+    var _this2;
+
+    _classCallCheck(this, InputField);
+
+    _this2 = _possibleConstructorReturn(this, (InputField.__proto__ || Object.getPrototypeOf(InputField)).call(this, props));
+    _this2.onHandleChange = _this2.onHandleChange.bind(_assertThisInitialized(_this2));
+    _this2.state = {
+      results: []
+    };
+    return _this2;
+  }
+
+  _createClass(InputField, [{
+    key: "onHandleChange",
+    value: function onHandleChange(e) {
+      var duas = this.props.duas;
+      var results = duas.filter(function (dua) {
+        var regex = new RegExp(e.target.value, 'gi');
+        return dua.title.match(regex) || dua.body.match(regex);
+      });
+      this.setState({
+        results: results
+      });
+      console.log(results);
     }
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
-    type: "text",
-    name: "title",
-    onChange: props.change,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 69
+  }, {
+    key: "render",
+    value: function render() {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 100
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Search, {
+        placeholder: "input search text",
+        enterButton: "Search Duas",
+        size: "large",
+        onChange: this.onHandleChange,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 101
+        }
+      }), this.state.results && this.state.results.map(function (result) {
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Duas, {
+          title: result.title,
+          content: result.body,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 107
+          }
+        });
+      }));
     }
-  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("button", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 70
-    }
-  }, "Submit Dua"));
-};
+  }]);
+
+  return InputField;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
 var Duas = function Duas(props) {
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd__["Col"], {
@@ -235,7 +293,12 @@ var Duas = function Duas(props) {
     className: __WEBPACK_IMPORTED_MODULE_2__DuaContainer_css___default.a.test,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 115
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd__["Row"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 116
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd__["Card"], {
     title: props.title,
@@ -244,14 +307,14 @@ var Duas = function Duas(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 117
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 118
     }
-  }, props.content)));
+  }, props.content))));
 };
 
 /***/ }),
@@ -262,7 +325,7 @@ var Duas = function Duas(props) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _jsxFileName = "C:\\Users\\Acer\\Desktop\\newProject\\dua-react-app\\components\\Footer\\Footer.js";
+var _jsxFileName = "/home/abdurahman/Desktop/dua-react-app/components/Footer/Footer.js";
 
 
 var Footer = function Footer() {
@@ -293,7 +356,7 @@ var Footer = function Footer() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_link___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_next_link__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_antd__ = __webpack_require__("antd");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_antd___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_antd__);
-var _jsxFileName = "C:\\Users\\Acer\\Desktop\\newProject\\dua-react-app\\components\\Header\\Navigation.js";
+var _jsxFileName = "/home/abdurahman/Desktop/dua-react-app/components/Header/Navigation.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -472,7 +535,7 @@ function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Layout_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__Layout_css__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_antd__ = __webpack_require__("antd");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_antd___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_antd__);
-var _jsxFileName = "C:\\Users\\Acer\\Desktop\\newProject\\dua-react-app\\components\\Layout.js";
+var _jsxFileName = "/home/abdurahman/Desktop/dua-react-app/components/Layout.js";
 
 // import Navigation from './Header/Navigation'
 
@@ -553,7 +616,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Layout__ = __webpack_require__("./components/Layout.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Container_DuaContainer__ = __webpack_require__("./components/Container/DuaContainer.js");
-var _jsxFileName = "C:\\Users\\Acer\\Desktop\\newProject\\dua-react-app\\pages\\index.js";
+var _jsxFileName = "/home/abdurahman/Desktop/dua-react-app/pages/index.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
