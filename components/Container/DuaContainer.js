@@ -66,10 +66,7 @@ export default class DuaWrapper extends Component {
         })
         return (
             <React.Fragment>
-                    <Col span={12} className={css.test} >
                         <InputField duas={this.state.duas} onChange={this.onHandleChange}/>
-                    </Col>
-
             </React.Fragment>
         )
     }
@@ -98,13 +95,22 @@ class InputField extends Component {
   render() {
     return (
       <div>
-            <Search
+      <Row className={css.test}>
+      <Col span={8} offset={8}>
+                  <Search
                 placeholder="input search text"
                 enterButton="Search Duas"
                 size="large"
                 onChange={this.onHandleChange}
             />
-            {this.state.results && this.state.results.map(result => <Duas title={result.title} content={result.body} />)}
+      </Col>
+    </Row>
+<Row >
+<Col >
+    {this.state.results && this.state.results.map(result => <Duas title={result.title} content={result.body} />)}
+</Col>
+</Row>
+
       </div>
     )
   }
@@ -112,7 +118,7 @@ class InputField extends Component {
 
 const Duas = props => {
     return (
-        <Col lg={{ span: 5}} className={css.test}>
+        <Col lg={{ span: 5 }} className={css.test}>
             <Row>
                 <Card title={props.title} style={{ width: 300 }} >
                     <p>{props.content}</p>

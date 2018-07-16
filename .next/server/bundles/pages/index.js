@@ -198,21 +198,14 @@ function (_Component) {
           fileName: _jsxFileName,
           lineNumber: 68
         }
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd__["Col"], {
-        span: 12,
-        className: __WEBPACK_IMPORTED_MODULE_2__DuaContainer_css___default.a.test,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 69
-        }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(InputField, {
         duas: this.state.duas,
         onChange: this.onHandleChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 69
         }
-      })));
+      }));
     }
   }]);
 
@@ -258,7 +251,20 @@ function (_Component2) {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 100
+          lineNumber: 97
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd__["Row"], {
+        className: __WEBPACK_IMPORTED_MODULE_2__DuaContainer_css___default.a.test,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 98
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd__["Col"], {
+        span: 8,
+        offset: 8,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 99
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Search, {
         placeholder: "input search text",
@@ -267,18 +273,28 @@ function (_Component2) {
         onChange: this.onHandleChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101
+          lineNumber: 100
         }
-      }), this.state.results && this.state.results.map(function (result) {
+      }))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd__["Row"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 108
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd__["Col"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 109
+        }
+      }, this.state.results && this.state.results.map(function (result) {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Duas, {
           title: result.title,
           content: result.body,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 107
+            lineNumber: 110
           }
         });
-      }));
+      }))));
     }
   }]);
 
@@ -293,12 +309,12 @@ var Duas = function Duas(props) {
     className: __WEBPACK_IMPORTED_MODULE_2__DuaContainer_css___default.a.test,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 115
+      lineNumber: 121
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd__["Row"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 116
+      lineNumber: 122
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd__["Card"], {
     title: props.title,
@@ -307,12 +323,12 @@ var Duas = function Duas(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 117
+      lineNumber: 123
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 118
+      lineNumber: 124
     }
   }, props.content))));
 };
@@ -587,17 +603,22 @@ var Layout = function Layout(props) {
       lineNumber: 16
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5_antd__["Row"], {
-    gutter: 16,
     type: "flex",
     justify: "center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 17
     }
-  }, props.children), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Footer_Footer__["a" /* default */], {
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5_antd__["Col"], {
+    span: 24,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 18
+    }
+  }, props.children)), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Footer_Footer__["a" /* default */], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
     }
   }));
 };

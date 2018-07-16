@@ -5,7 +5,7 @@ import Footer from './Footer/Footer'
 import './Layout.css';
 import { Row, Col } from 'antd';
 
-const Layout = (props) => ( 
+const Layout = (props) => (
     <div>
         <Head>
             <title>Dua application</title>
@@ -14,8 +14,10 @@ const Layout = (props) => (
             <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/antd/3.7.0/antd.css'/>
         </Head>
         <Navigation/>
-            <Row gutter={16} type="flex" justify="center">
+            <Row type="flex" justify="center">
+            <Col span={24}>
                 {props.children}
+            </Col>
             </Row>
         <Footer/>
     </div>
