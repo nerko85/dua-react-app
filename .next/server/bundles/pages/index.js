@@ -323,33 +323,6 @@ function (_Component2) {
 
 /***/ }),
 
-/***/ "./components/Footer/Footer.js":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _jsxFileName = "C:\\Users\\Acer\\Desktop\\newProject\\dua-react-app\\components\\Footer\\Footer.js";
-
-
-var Footer = function Footer() {
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5
-    }
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    }
-  }, "This is the footer"));
-};
-
-/* harmony default export */ __webpack_exports__["a"] = (Footer);
-
-/***/ }),
-
 /***/ "./components/Header/Navigation.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -518,14 +491,14 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ "./components/Layout.css":
+/***/ "./components/Master.css":
 /***/ (function(module, exports) {
 
 
 
 /***/ }),
 
-/***/ "./components/Layout.js":
+/***/ "./components/Master.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -534,84 +507,84 @@ function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_head__ = __webpack_require__("next/head");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_head___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_next_head__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Header_Navigation__ = __webpack_require__("./components/Header/Navigation.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Footer_Footer__ = __webpack_require__("./components/Footer/Footer.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Layout_css__ = __webpack_require__("./components/Layout.css");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Layout_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__Layout_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_antd__ = __webpack_require__("antd");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_antd___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_antd__);
-var _jsxFileName = "C:\\Users\\Acer\\Desktop\\newProject\\dua-react-app\\components\\Layout.js";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Master_css__ = __webpack_require__("./components/Master.css");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Master_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__Master_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_antd__ = __webpack_require__("antd");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_antd___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_antd__);
+var _jsxFileName = "C:\\Users\\Acer\\Desktop\\newProject\\dua-react-app\\components\\Master.js";
 
 // import Navigation from './Header/Navigation'
 
+ // import Footer from './Footer/Footer'
 
 
 
+var Search = __WEBPACK_IMPORTED_MODULE_4_antd__["Input"].Search;
+var Footer = __WEBPACK_IMPORTED_MODULE_4_antd__["Layout"].Footer;
 
-var Search = __WEBPACK_IMPORTED_MODULE_5_antd__["Input"].Search;
-
-var Layout = function Layout(props) {
+var Master = function Master(props) {
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10
-    }
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_head___default.a, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
     }
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("title", {
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_head___default.a, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("title", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
     }
   }, "Dua application"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("link", {
     rel: "stylesheet",
     href: "/_next/static/style.css",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 14
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("link", {
     rel: "stylesheet",
     href: "../node_modules/antd/dist/antd.css",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 15
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("link", {
     rel: "stylesheet",
     href: "https://cdnjs.cloudflare.com/ajax/libs/antd/3.7.0/antd.css",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 16
     }
   })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Header_Navigation__["a" /* default */], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
-    }
-  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", {
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 18
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    }
-  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5_antd__["Row"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 19
     }
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5_antd__["Col"], {
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_antd__["Row"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_antd__["Col"], {
     span: 18,
     offset: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 21
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Search, {
     placeholder: "input search text",
@@ -622,25 +595,28 @@ var Layout = function Layout(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 22
     }
-  }))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5_antd__["Row"], {
+  }))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_antd__["Row"], {
     gutter: 16,
     type: "flex",
     justify: "center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 30
     }
-  }, props.children), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Footer_Footer__["a" /* default */], {
+  }, props.children), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Footer, {
+    style: {
+      textAlign: 'center'
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 33
     }
-  }));
+  }, "Ant Design \xA92016 Created by Ant UED"));
 };
 
-/* harmony default export */ __webpack_exports__["a"] = (Layout);
+/* harmony default export */ __webpack_exports__["a"] = (Master);
 
 /***/ }),
 
@@ -652,7 +628,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Index; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Layout__ = __webpack_require__("./components/Layout.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Master__ = __webpack_require__("./components/Master.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Container_DuaContainer__ = __webpack_require__("./components/Container/DuaContainer.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_antd__ = __webpack_require__("antd");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_antd___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_antd__);
@@ -691,7 +667,7 @@ function (_Component) {
   _createClass(Index, [{
     key: "render",
     value: function render() {
-      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__components_Layout__["a" /* default */], {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__components_Master__["a" /* default */], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 9

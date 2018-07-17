@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Layout from '../components/Layout';
+import Master from '../components/Master';
 import LoginForm from '../components/Login/Login';
 // import 'antd/dist/antd.less';
 // // import Button from 'antd/lib/button'
@@ -10,8 +10,8 @@ import LoginForm from '../components/Login/Login';
 
 export default class Login extends Component {
     render(){
-    return  <Layout>
+    return  <Master>
               <LoginForm></LoginForm>  
-            </Layout>
+            </Master>
     }
 }
